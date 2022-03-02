@@ -1,5 +1,8 @@
 # Introduction
 ### The project has the objective to identify a leads hotlist suitable for food delivery channel in the city of London.
+
+The analysis is best showed in notebook uber_notebook.ipynb
+
 > **a.** Database of London Restaurants -> connect to UK Food Agency api and read in json.\
 **b.** Clarity on food delivery business model to define criteria for leads\
 **c.** Filter out outlets that are already in food delivery app\
