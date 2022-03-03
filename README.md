@@ -42,7 +42,7 @@ Important:
 
 # Future and Next Steps
 
-Data: get average meal ticket. Example: via TheFork - either scrapping or unnoficial api
+Data: get average meal ticket. Example: via TheFork - either scrapping or unnoficial api. statista, nielsen, restaurant.org. google
       
 
 Package: add more methods on get_data in order to be able to retrieve information about restaurants in other countries.
