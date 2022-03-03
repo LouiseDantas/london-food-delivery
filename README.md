@@ -23,11 +23,16 @@ However it can be trained again with new data if necessary.
 
 # Package
 
-The package can be installed by:
-```bash
-pip install git+ssh://git@github.com/LouiseDantas/TaxiFareEstimator
-```
-Can use the trainer class to set the pipeline, run the model, evaluate it and upload into gcp or save locally (save_model method).
+The class leads was created to benefit from reuse of code and modularity.
+This way we can create many objects as we want - london, manchester, etc. and manipulate them in similar or different ways but still have the same properties.
+For example, in london we might want to have a leads list based on closest distance to existing Uber eats restaurants
+in Manchester we might want to focus on chains. 
+
+The two approaches are possible without rewriting any code.
+
+Important: 
+  - matching restaurants is being done using latitude and longitude.
+  - Only possible for UK. Data based on website UK Food Agency
 
 # API
 
