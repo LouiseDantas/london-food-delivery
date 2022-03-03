@@ -22,4 +22,4 @@ def get_save_data(city:str):
         response = requests.get(url).json()
         df_iter = json_normalize(response['FHRSEstablishment']['EstablishmentCollection']['EstablishmentDetail'])
         df=pd.concat([df, df_iter], axis= 0)
-    df.to_csv(f'/home/louisedantas/code/LouiseDantas/competitor-analysis/UKFoodAgency{city}.csv')
+    df.to_csv(f'/home/louisedantas/code/LouiseDantas/london-food-delivery/UKFoodAgency{city}.csv')

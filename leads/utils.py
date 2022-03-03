@@ -1,4 +1,6 @@
-
+import re
+import warnings
+from math import radians, cos, sin, asin, sqrt
 
 def get_postcode(fulladdress):
     try:
@@ -70,12 +72,12 @@ def return_paretto(df,column_name,column_name_sum,threshold):
     paretto_list=grouped_df[column_name][0:index_paretto+1].values.tolist()
     return grouped_df, paretto_list
 
-def match_restaurant(lat, long):
-    distances = df.apply(
-        lambda row: haversine(lat, long, float(row['Geocode.Latitude']), float(row['Geocode.Longitude'])),
+def match_restaurant(uber_df,lat, long,min_dist=0.005):
+    distances = uber_df.apply(
+        lambda row: haversine(lat, long, float(row['latitude']), float(row['longitude'])),
         axis=1)
     closest=distances.min()
-    if closest>0.005:
+    if closest>min_dist:
         return 'nomatch'
     else:
-        return df.loc[distances.idxmin(), 'BusinessName'],closest
+        return uber_df.loc[distances.idxmin(), 'name'],closest
