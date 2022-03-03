@@ -24,7 +24,7 @@ The analysis is best showed in notebook uber_notebook.ipynb
      a. We do not have information on volume or order ticket. But we do have number of reviews and number of outlets. We will assume number of outlets is positively correlated with volume.
      c. We do have hygiene score. We will remove restaurants with score below 3. Meaning "urgent,major or some improvement is required"
 
-  **In summary: we provide a list of restaurant chains with 4 or more outlets, with good hygiene standards and categories matching taste profile of Uber users.
+  **In summary: we provide a list of restaurant chains with 4 or more outlets, with good hygiene standards and categories matching taste profile of Uber users.**
 
 # Package - Scalable Solution
 
